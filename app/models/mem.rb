@@ -5,4 +5,8 @@ class Mem < ActiveRecord::Base
                     default_url: "/images/:style/missing.png"
   validates_attachment :image,
                        content_type: { content_type: ["image/jpg", "image/gif", "image/png"] }
+
+  after_validation(on: :create) do
+    self.active = false
+  end
 end
