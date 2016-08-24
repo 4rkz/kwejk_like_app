@@ -33,7 +33,7 @@ class MemsController < ApplicationController
   # POST /mems
   # POST /mems.json
   def create
-    @mem = Mem.new(mem_params)
+    @mem = current_user.mems.new(mem_params)
 
     respond_to do |format|
       if @mem.save
