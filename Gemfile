@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'paperclip'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'rails_admin'
