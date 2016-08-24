@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :mems
-  root 'home#index'
+  resources :mems do
+    collection do
+      get 'my'
+      get 'inactive'
+    end
+  end
+  root 'mems#index'
 
   devise_for :admins
   devise_for :users
