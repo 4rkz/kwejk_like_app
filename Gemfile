@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
 gem 'paperclip'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
